@@ -12,13 +12,15 @@ const WorkoutEdit = (props) => {
             body: JSON.stringify({log: {description: editDesc, definition: editDef, result: editRes}}),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': props.token
+                'Authorization': `Bearer ${props.token}`
             })
+        
         }).then((res) => {
             props.fetchWorkouts();
             props.updateOff();
         })
     }
+    
 
     return(
         <Modal isOpen={true}>
