@@ -10,7 +10,7 @@ const WorkoutIndex = (props) => {
     const [workoutToUpdate, setWorkoutToUpdate] = useState({});
 
     const fetchWorkouts = () => {
-        fetch('http://localhost:3000/log/user', {
+    fetch('http://localhost:3000/log/user', {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',
